@@ -11,7 +11,8 @@ def validUTF8(data):
     Args:
         data(list): data set containing multiple characters
     Returns:
-        boolean: true if the data is valid utf-8 encoded, otherwise false
+        boolean: true if the data is valid utf-8 encoded, 
+        otherwise false
     """
     utf8valid = 0
     for val in data:
@@ -27,3 +28,4 @@ def validUTF8(data):
             return False
         utf8valid = max(utf8valid - 1, 0)
     return utf8valid == 0
+
