@@ -25,8 +25,8 @@ def isWinner(x, nums):
     """
     nums.sort()
     winner = False
-    Maria = 0
-    Ben = 0
+    Me = 0
+    You = 0
     for game in range(x):
         # print("game# ", game+1)
         nums2 = list(range(1, nums[game] + 1))
@@ -36,9 +36,9 @@ def isWinner(x, nums):
             """
             # uncomment to monitor turns
             if turn % 2 != 0:
-                print("Ben turn ")
+                print("Your turn ")
             else:
-                print("Maria turn ")
+                print("My turn ")
             """
             change = False
             for i, n in enumerate(nums2):
@@ -52,12 +52,12 @@ def isWinner(x, nums):
             if change is False:
                 break
         if turn % 2 != 0:
-            Maria += 1
+            Me += 1
         else:
-            Ben += 1
-        # print("Maria: {}, Ben: {}".format(Maria, Ben))
-    if Maria == Ben:
+            You += 1
+        # print("Me: {}, You: {}".format(Me You))
+    if Me == You:
         return None
-    if Maria > Ben:
-        return "Maria"
-    return "Ben"
+    if Me > You:
+        return "Me"
+    return "You"
